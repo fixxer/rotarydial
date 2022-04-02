@@ -14,6 +14,10 @@
 //                Cleaned up implementation, modified to work more like the
 //                Rotatone commercial product.
 //
+// Modified     : Aleksandr Racheev 2022-04-02
+//                https://github.com/fixxer/rotarydial
+//                Added erikophone dial option
+//
 // This code is distributed under the GNU Public License
 // which can be found at http://www.gnu.org/licenses/gpl.txt
 //
@@ -23,6 +27,7 @@
 
 // Uncomment to build with reverse dial
 //#define NZ_DIAL
+// Uncomment to build with erikophone dial
 #define SE_DIAL
 
 #include <stdbool.h>
