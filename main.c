@@ -161,11 +161,13 @@ int main(void)
 #ifdef NZ_DIAL
                     // NZPO Phones only. 0 is same as GPO but 1-9 are reversed.
                     rs->dialed_digit = (10 - rs->dialed_digit);
-#elif SE_DIAL
+#else                    
+#ifdef SE_DIAL                    
                     rs->dialed_digit = rs->dialed_digit - 1;                                        
 #else
                     if (rs->dialed_digit == 10)
                         rs->dialed_digit = 0; // 10 pulses => 0
+#endif
 #endif
                     wdt_timer_start(SLEEP_128MS);
                     start_sleep();
